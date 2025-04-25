@@ -1,33 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  background: #222;
-  color: white;
   font-family: sans-serif;
+  background: #333;
+  color: white;
   display: flex;
   justify-content: center;
-  padding: 30px;
+  padding: 20px;
 }
 
 .player {
   max-width: 750px;
   width: 100%;
+  background: #000;
 }
 
 .viewer {
   width: 100%;
-  max-height: 400px;
+  display: block;
 }
 
-.controls {
+.player__controls {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
-  background: #333;
+  background: #444;
   padding: 10px;
 }
 
-.player__button,
-[data-skip] {
+.player__button {
   background: none;
   border: 1px solid white;
   color: white;
@@ -41,19 +46,16 @@ body {
 }
 
 .progress {
+  flex: 1;
   height: 5px;
   background: #666;
-  flex: 1;
   cursor: pointer;
-  margin-bottom: 5px;
   position: relative;
 }
 
 .progress__filled {
   width: 0%;
   height: 100%;
-  background: #f00;
+  background: #f90;
   transition: width 0.1s linear;
 }
-
-/* Your CSS Code here. */
